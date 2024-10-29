@@ -1,17 +1,11 @@
-export function getPrimeFactors(num: number):number[] {
-  if (num<=1) return [];
-
+export function getPrimeFactors(num: number): number[] {
   let primeFactors: number[] = [];
   let currentNum: number = num;
-  let distributer: number = num;
-    while(currentNum % distributer==0 && distributer>1){
-      primeFactors.push(distributer)
-      currentNum = currentNum/distributer;
-      distributer-= currentNum;
+  for(let distributer: number = 2; distributer<=currentNum; distributer++) {
+    while (currentNum > 1 && currentNum % distributer == 0) {
+      primeFactors.push(distributer);
+      currentNum = currentNum / distributer;
     }
-  
-  console.log(num);
-  console.log(primeFactors);
-
+  }
   return primeFactors;
 }
