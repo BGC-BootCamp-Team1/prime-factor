@@ -10,11 +10,7 @@ describe("add", () => {
   ];
   testCases.forEach(({ num, expected }) => {
     it(`getPrimeFactors(${num}) should return ${expected}`, () => {
-      //when
-      const result = getPrimeFactorsTDD(num);
-
-      //then
-      expect(result).toEqual(expected);
+      expect(getPrimeFactorsTDD(num)).toEqual(expected);
     });
   });
 });
