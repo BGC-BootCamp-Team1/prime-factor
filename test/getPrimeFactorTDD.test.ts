@@ -4,7 +4,8 @@ describe("add", () => {
   const testCases = [
     { num: 1, expected: [] },
     { num: 2, expected: [2] },
-    { num: 3, expected: [3] }
+    { num: 3, expected: [3] },
+    { num: 4, expected: [2, 2] }
   ];
   testCases.forEach(({ num, expected }) => {
     it(`getPrimeFactors(${num}) should return ${expected}`, () => {
