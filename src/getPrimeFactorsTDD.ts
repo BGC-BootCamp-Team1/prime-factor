@@ -1,11 +1,10 @@
 export function getPrimeFactorsTDD(num: number): number[] {
   let primeFactors: number[] = [];
-  while (num % 2 == 0) {
-    primeFactors.push(2);
-    num = num/2;
-  }
-  if (num % 3 == 0) {
-    primeFactors.push(3);
+  for(let divisor = 2; divisor<=num; divisor++){
+    while (num % divisor == 0) {
+      primeFactors.push(divisor);
+      num = num/divisor;
+    }
   }
   return primeFactors;
 }
